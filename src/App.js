@@ -9,16 +9,16 @@ function App() {
   const [currentUser, setCurrentUser] = useState({})
 
   return (
-    <BrowserRouter> 
+    <> 
         <Switch>
           <Route exact path = "/">
-              <Login setCurrentUser={setCurrentUser}/>
+              <Login setCurrentUser={setCurrentUser} currentUser={currentUser}/>
           </Route>
-          <Route exact path = "/MyProfile">
+          <Route path = "/MyProfile">
             <MyProfile currentUser={currentUser}/>
           </Route>
         </Switch>
-    </BrowserRouter>
+    </>
   );
 }
 

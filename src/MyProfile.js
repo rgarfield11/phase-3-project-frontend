@@ -1,10 +1,19 @@
 import React, {useState} from 'react'
 
-function MyProfile(){
+function MyProfile({currentUser}){
     const [name, setName] = useState("")
     const [balance, setBalance] = useState("")
+    const {id, username} = currentUser
 
     
+ 
+    function listAccounts() {
+        fetch(`http://localhost:9292//users/${id}`)
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+
+
     function handleName(e){
         setName(e.target.value)
     }
@@ -18,7 +27,8 @@ function MyProfile(){
         e.preventDefault()
         const account = {
             name: name,
-            balance: balance
+            balance: balance,
+            user_id: currentUser.id
         }
 
         fetch("http://localhost:9292/accounts",{
@@ -53,6 +63,10 @@ function MyProfile(){
                     <br/>
                     <button>Create Account</button> 
             </form>
+            <div>
+                <h1>Hello, {username}!</h1>
+                <button onClick={listAccounts}>Accounts</button>
+            </div>
         </div>
         )
 }

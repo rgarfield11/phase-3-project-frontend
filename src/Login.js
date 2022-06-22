@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {useHistory} from "react-router-dom"
 
-function Login({setCurrentUser}){
+function Login({setCurrentUser, currentUser}){
     const history = useHistory()
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
@@ -14,12 +14,6 @@ function Login({setCurrentUser}){
     function handlePassword(e){
         setPassword(e.target.value)
     }
-    
-    // useEffect(()=>{
-    //     fetch("http://localhost:9292")
-    //     .then((r) => r.json())
-    //     .then((data) => console.log(data));
-    // }, [])
 
     function handleCreateProfile(e){
         e.preventDefault()
