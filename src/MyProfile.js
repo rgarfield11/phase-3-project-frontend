@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 
 function MyProfile(){
-    const [accountName, setAccountName] = useState("")
+    const [name, setName] = useState("")
     const [balance, setBalance] = useState("")
 
     
-    function handleAccountName(e){
-        setAccountName(e.target.value)
+    function handleName(e){
+        setName(e.target.value)
     }
 
     function handleBalance(e){
@@ -17,7 +17,7 @@ function MyProfile(){
     function handleCreateAccount(e){
         e.preventDefault()
         const account = {
-            accountName: accountName,
+            name: name,
             balance: balance
         }
 
@@ -32,7 +32,7 @@ function MyProfile(){
         .then(account => console.log(account))
 
         e.preventDefault()  
-        setAccountName("")
+        setName("")
         setBalance("")
     }
     return(
@@ -41,8 +41,8 @@ function MyProfile(){
             <form onSubmit={handleCreateAccount}>
                     <label>Account Name: </label>
                     <input 
-                        onChange={handleAccountName}
-                        value={accountName}
+                        onChange={handleName}
+                        value={name}
                     />
                     <br/>
                     <label>Starting Balance: $</label>
