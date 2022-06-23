@@ -45,7 +45,8 @@ function Homepage(){
             key={account.id} 
             id={account.id} 
             name={account.name} 
-            balance={account.balance} />
+            balance={account.balance} 
+            setBalance={setBalance}/>
     })
 
     return(
