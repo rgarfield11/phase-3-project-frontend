@@ -17,10 +17,10 @@ function AccountCard({id, name, balance}) {
 
   return (
     <>
-        {showCard ? <div className="accountCard">
-        <div onClick={expandAccount}>
-            <h2>{name}</h2>
-            <h5>${balance}</h5>
+        {showCard ? <div className="accountCard"  >
+        <div onClick={expandAccount} >
+            <h2 style={{color: "black", fontSize: "25px", fontFamily: "fantasy"  }}>{name}</h2>
+            <h5 style={{color: "green", fontSize: "20px"  }}>${balance}</h5>
         </div>
         <button onClick={deleteAccount}>🗑️</button>
         </div> : null}

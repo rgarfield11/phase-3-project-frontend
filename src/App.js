@@ -6,7 +6,7 @@ import Homepage from './Homepage';
 function App() {
 
   return (
-    <Homepage/>
+    <Homepage style={{backgroundColor: "blue"}}/>
   );
 }
 
