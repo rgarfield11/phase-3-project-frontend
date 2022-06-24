@@ -79,8 +79,9 @@ function AccountCard({id, name, balance, setBalance}) {
     <>
         {showCard ? <div style={{width: "40%", margin: "auto", marginTop: "20px", borderStyle: "solid", borderWidth: "2px"}} className="accountCard"  >
         <div >
-            <h2 style={{color: "black", fontSize: "25px", fontFamily: "papyrus"  }}>{name}</h2>
-            <h5 style={{color: "green", fontSize: "20px", borderStyle: "solid", borderWidth: "2px", width: "30%", margin: "auto"}}>Account Balance: ${balance}</h5>
+            <h2 style={{color: "black", fontSize: "25px", fontFamily: "papyrus", textDecorationLine: "underline"}}>{name}</h2>
+            {balance > 0 ? <h5 style={{background: "white", color: "green", fontSize: "20px", borderStyle: "solid", borderWidth: "2px", width: "30%", margin: "auto"}}>Account Balance: ${balance}</h5> 
+            : <h5 style={{background: "white", color: "red", fontSize: "20px", borderStyle: "solid", borderWidth: "2px", width: "30%", margin: "auto"}}>Account Balance: ${balance}</h5>}
 
         </div>
         {renderExpenses}
