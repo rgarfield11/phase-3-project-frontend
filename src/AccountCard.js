@@ -77,16 +77,16 @@ function AccountCard({id, name, balance, setBalance}) {
 
   return (
     <>
-        {showCard ? <div className="accountCard"  >
-        <div>
-            <h2 style={{color: "black", fontSize: "25px", fontFamily: "fantasy"  }}>{name}</h2>
-            <h5 style={{color: "green", fontSize: "20px"  }}>Account Balance: ${balance}</h5>
+        {showCard ? <div style={{width: "40%", margin: "auto", marginTop: "20px", borderStyle: "solid", borderWidth: "2px"}} className="accountCard"  >
+        <div >
+            <h2 style={{color: "black", fontSize: "25px", fontFamily: "papyrus"  }}>{name}</h2>
+            <h5 style={{color: "green", fontSize: "20px", borderStyle: "solid", borderWidth: "2px", width: "30%", margin: "auto"}}>Account Balance: ${balance}</h5>
 
         </div>
         {renderExpenses}
         
         <form onSubmit={handleCreateExpense}>
-                <h4 style={{fontSize:"25px",textDecorationLine: "underline", fontFamily:"fantasy"}}>Add An Expense</h4>
+                <h4 style={{marginBottom: "2px",fontSize:"20px",textDecorationLine: "underline", fontFamily:"papyrus"}}>Add An Expense</h4>
                 <label> Expense $$:  </label>
                 <input onChange={handlePrice} value={price}></input>
                 <br/>
@@ -98,7 +98,7 @@ function AccountCard({id, name, balance, setBalance}) {
                 <button style={{color: "green"}}>Submit Expense</button>
         </form>
         <br/>
-        <button style={{fontSize: "large"}} onClick={deleteAccount}> 🗑️ </button>
+        <button style={{fontSize: "large", marginBottom: "20px"}} onClick={deleteAccount}> 🗑️ </button>
         </div> : null}
     </>
   )

@@ -9,7 +9,7 @@ function Homepage(){
     useEffect(() => {(fetch(`http://localhost:9292/accounts`))
         .then(res => res.json())
         .then(data => setAccounts(data))
-    },[accounts.length])
+    },[accounts.length, balance])
 
     function handleName(e) {
         setName(e.target.value)
@@ -52,10 +52,10 @@ function Homepage(){
     return(
         <>
         <div>
-            <h1 style={{backgroundColor:"green",fontFamily:"Helvetica"}}>Expensify</h1>
+            <h1 style={{backgroundColor:"green",fontFamily:"Papyrus"}}>Expensify</h1>
         </div>
         <div >
-            <h3 style={{fontVariant:"smallcaps", fontSize: "25px", textDecorationLine: "underline", fontFamily:"fantasy"}}>Add Your Account</h3>
+            <h3 style={{fontVariant:"smallcaps", fontSize: "25px", textDecorationLine: "underline", fontFamily:"papyrus"}}>Add Your Account</h3>
             <form onSubmit={handleCreateAccount}>
                 <label>Account: </label>
                 <input onChange={handleName} value={name}></input>

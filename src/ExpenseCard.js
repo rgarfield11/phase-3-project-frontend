@@ -2,8 +2,8 @@ import React from 'react'
 
 function ExpenseCard({price, description}) {
   return (
-    <div>
-        <h3>${price}</h3>
+    <div style={{width: "20%", margin: "auto", marginTop: "20px", borderStyle: "solid", borderWidth: "1px"}}>
+        <h5>${price}</h5>
         <h5>{description}</h5>
     </div>
   )
