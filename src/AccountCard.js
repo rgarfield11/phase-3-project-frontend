@@ -81,12 +81,13 @@ function AccountCard({id, name, balance, setBalance}) {
         <div>
             <h2 style={{color: "black", fontSize: "25px", fontFamily: "fantasy"  }}>{name}</h2>
             <h5 style={{color: "green", fontSize: "20px"  }}>Account Balance: ${balance}</h5>
+
         </div>
         {renderExpenses}
-        <ExpenseCard/>
+        
         <form onSubmit={handleCreateExpense}>
-                <h4>Add an Expense</h4>
-                <label>Price: </label>
+                <h4 style={{fontSize:"25px",textDecorationLine: "underline", fontFamily:"fantasy"}}>Add An Expense</h4>
+                <label> Expense $$:  </label>
                 <input onChange={handlePrice} value={price}></input>
                 <br/>
                 <br/>
@@ -96,7 +97,8 @@ function AccountCard({id, name, balance, setBalance}) {
                 <br/>
                 <button style={{color: "green"}}>Submit Expense</button>
         </form>
-        <button onClick={deleteAccount}>🗑️</button>
+        <br/>
+        <button style={{fontSize: "large"}} onClick={deleteAccount}> 🗑️ </button>
         </div> : null}
     </>
   )

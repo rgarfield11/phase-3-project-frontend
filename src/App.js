@@ -3,13 +3,13 @@ import Homepage from './Homepage';
 
 
 
-
 function App() {
 
   return (
-    <Homepage style={{backgroundColor: "blue"}}/>
+     <div style={{backgroundColor:"rgb(232,232,232)",textAlign: "center", borderStyle:"solid"}} >
+    <Homepage />
+    </div>
   );
 }
 
 export default App;
-

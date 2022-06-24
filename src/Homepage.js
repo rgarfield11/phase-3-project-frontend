@@ -52,10 +52,10 @@ function Homepage(){
     return(
         <>
         <div>
-            <h1 style={{backgroundColor: "green"}}>Expensify</h1>
+            <h1 style={{backgroundColor:"green",fontFamily:"Helvetica"}}>Expensify</h1>
         </div>
-        <div>
-            <h3 style={{fontVariant:"smallcaps", fontSize: "25px", textDecorationLine: "underline"}}>Add Your Account</h3>
+        <div >
+            <h3 style={{fontVariant:"smallcaps", fontSize: "25px", textDecorationLine: "underline", fontFamily:"fantasy"}}>Add Your Account</h3>
             <form onSubmit={handleCreateAccount}>
                 <label>Account: </label>
                 <input onChange={handleName} value={name}></input>
@@ -68,7 +68,7 @@ function Homepage(){
                 <button style={{color: "green"}}>Create Account </button>
             </form>
             {renderCards}
-            <AccountCard />
+            
         </div>
         </>
     )
